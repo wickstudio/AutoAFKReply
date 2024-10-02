@@ -3,14 +3,12 @@
  * @description Manually toggle AFK mode on or off from the plugin settings, or activate AFK mode automatically after 5 minutes of inactivity. Automatically replies to DMs when AFK is activated.
  * @version 2.0.0
  * @author Wick
+ * @invite wicks
  * @github https://github.com/wickstudio/AutoAFKReply
- * @discord https://discord.gg/wicks
  * @website https://wickdev.me
  * @updateUrl https://raw.githubusercontent.com/wickstudio/AutoAFKReply/main/AutoAFKReply.plugin.js
- * @sourceUrl https://github.com/wickstudio/AutoAFKReply
+ * @source https://github.com/wickstudio/AutoAFKReply
  */
-
-
 
 module.exports = (() => {
     const config = {
@@ -101,7 +99,7 @@ module.exports = (() => {
 
                 this.inactivityTimeout = setTimeout(() => {
                     this.afk = true;
-                    this.lastMessageTimestamp = new Date().getTime(); // Record when AFK was activated
+                    this.lastMessageTimestamp = new Date().getTime();
                     BdApi.showToast("AFK mode automatically activated after 5 minutes of inactivity.", { type: "info" });
                 }, 300000);
             }
